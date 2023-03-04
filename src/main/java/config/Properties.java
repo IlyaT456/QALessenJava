@@ -10,10 +10,10 @@ public class Properties {
         //настройки selenoid
         Configuration.driverManagerEnabled = true;
         Configuration.browserCapabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities.setCapability("enableVNC", true);
-        Configuration.browserCapabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities.setCapability("enableVNC", false);
+        Configuration.browserCapabilities.setCapability("enableVideo", false);
         Configuration.browserSize = "1920x1080";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     public static void settingsJenkins() {
