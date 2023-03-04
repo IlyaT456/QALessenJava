@@ -19,7 +19,7 @@ public class Properties {
     public static void settingsJenkins() {
         // настройки браузера property – для запуска в дженкинсе
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "100");
+        Configuration.browserVersion = System.getProperty("browserVersion", "110");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
     }
 
