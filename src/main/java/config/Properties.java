@@ -10,9 +10,9 @@ public class Properties {
         //настройки selenoid
         Configuration.driverManagerEnabled = true;
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        capabilities.setCapability("enableVNC", false);
+        capabilities.setCapability("enableVideo", false);
+        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = "1920x1080";
     }

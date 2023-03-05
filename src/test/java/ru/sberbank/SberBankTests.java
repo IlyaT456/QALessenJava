@@ -2,6 +2,7 @@ package ru.sberbank;
 
 import config.BaseTest;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import steps.Selectors;
 
