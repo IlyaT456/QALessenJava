@@ -9,11 +9,12 @@ public class Properties {
     public static void settingsSelenoid() {
         //настройки selenoid
         Configuration.driverManagerEnabled = true;
-        Configuration.browserCapabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities.setCapability("enableVNC", false);
-        Configuration.browserCapabilities.setCapability("enableVideo", false);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = "1920x1080";
-        //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
 
     public static void settingsJenkins() {
