@@ -16,7 +16,7 @@ public class BaseTest {
 
     @BeforeAll
     static void configure() {
-        Properties.settingsSelenoid();
+        //Properties.settingsSelenoid();
         Properties.settingsJenkins();
     }
 
