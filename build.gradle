@@ -42,6 +42,18 @@ dependencies {
     )
 }
 
+task sberbank_test(type:Test) {
+    useJUnitPlatform {
+        includeTags("sberbank")
+    }
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
 tasks.withType(Test) {
     useJUnitPlatform()
 
