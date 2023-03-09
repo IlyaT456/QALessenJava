@@ -19,9 +19,9 @@ public class Properties {
 
     public static void settingsJenkins() {
         // настройки браузера property – для запуска в дженкинсе
-//        Configuration.browser = System.getProperty("browser", "chrome");
-//        Configuration.browserVersion = System.getProperty("browserVersion", "100");
-//        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+          Configuration.browser = System.getProperty("browser", "chrome");
+          Configuration.browserVersion = System.getProperty("browserVersion", "101");
+          Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
     }
 
     public Properties settingAllure() {
