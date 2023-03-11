@@ -13,14 +13,10 @@ public class BaseTest {
     Attachments attachments = new Attachments();
     Properties properties = new Properties();
 
-    @BeforeAll
-    static void configure() {
-        Properties.settingsSelenoid();
-        Properties.settingsJenkins();
-    }
-
     @BeforeEach
     void configureBeForeEach() {
+        properties.settingsSelenoid();
+        properties.settingsJenkins();
         properties.settingAllure();
     }
 

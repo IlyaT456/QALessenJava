@@ -8,27 +8,25 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Properties {
-    public static void settingsSelenoid() {
+    public void settingsSelenoid() {
         //настройки selenoid  clean test -Dselenide.remote=https://user1:1234@selenoid.autotests.cloud/wd/hub
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.driverManagerEnabled = true;
-        Configuration.browserSize = "1920x1080";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
 
-    public static void settingsJenkins() {
+    public void settingsJenkins() {
         // настройки браузера property – для запуска в дженкинсе
           Configuration.browser = System.getProperty("browser", "chrome");
          // Configuration.browserVersion = System.getProperty("browserVersion", "101");
           Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
     }
 
-    public Properties settingAllure() {
+    public void settingAllure() {
         // настройки для работы Allure
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        return this;
     }
 }
