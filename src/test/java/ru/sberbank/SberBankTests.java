@@ -48,4 +48,10 @@ public class SberBankTests extends BaseTest {
                 .categoryPanel("Ипотека")
                 .checkingComplianceSubstitutionsMortgage();
     }
+
+    @Test
+    @DisplayName("Открыть Яндекс")
+    public void openYandex() {
+        selector.openYandex();
+    }
 }

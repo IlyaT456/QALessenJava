@@ -23,6 +23,12 @@ public class Selectors {
         return this;
     }
 
+    @Step("Открыть главную Яндекс")
+    public Selectors openYandex() {
+        open("https://dzen.ru/");
+        return this;
+    }
+
     @Step("Кликнуть по пункту {0} главного меню")
     public Selectors categoryPanel(String text) {
         page.mainMenu(text).shouldBe(exist, Duration.ofSeconds(30)).click();
