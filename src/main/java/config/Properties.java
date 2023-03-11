@@ -12,7 +12,7 @@ public class Properties {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
-        Configuration.baseUrl = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = "1920x1080";
     }
