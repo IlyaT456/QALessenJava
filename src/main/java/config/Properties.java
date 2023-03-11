@@ -12,10 +12,11 @@ public class Properties {
         //настройки selenoid  clean test -Dselenide.remote=https://user1:1234@selenoid.autotests.cloud/wd/hub
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.driverManagerEnabled = true;
-        Configuration.browserCapabilities = new DesiredCapabilities();
-        Configuration.browserCapabilities.setCapability("enableVNC",  true);
-        Configuration.browserCapabilities.setCapability("enableVideo", true);
         Configuration.browserSize = "1920x1080";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = capabilities;
     }
 
     public static void settingsJenkins() {
