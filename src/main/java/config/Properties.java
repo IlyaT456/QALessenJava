@@ -9,11 +9,10 @@ public class Properties {
     public static void settingsSelenoid() {
         //настройки selenoid  clean test -Dselenide.remote=https://user1:1234@selenoid.autotests.cloud/wd/hub
         Configuration.driverManagerEnabled = true;
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("enableVNC", true);
-        capabilities.setCapability("enableVideo", true);
+        Configuration.browserCapabilities = new DesiredCapabilities();
+        Configuration.browserCapabilities.setCapability("enableVNC", true);
+        Configuration.browserCapabilities.setCapability("enableVideo", true);
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-        Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = "1920x1080";
     }
 
